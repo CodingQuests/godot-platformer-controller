@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl5pujfyrwuri"]
+
+[ext_resource type="Script" uid="uid://cymaxu8tlwlhh" path="res://scripts/player.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cymak3og6n162" path="res://assets/kenney_pixel-platformer/Tiles/Characters/tile_0000.png" id="idle_tex"]
+[ext_resource type="Texture2D" uid="uid://blevukfmvo2" path="res://assets/kenney_pixel-platformer/Tiles/Characters/tile_0001.png" id="walk_tex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("idle_tex")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("idle_tex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("walk_tex")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("walk_tex")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("walk_tex")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("walk_tex")
+}],
+"loop": true,
+"name": &"double_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("idle_tex")
+}],
+"loop": true,
+"name": &"wall_jump",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_player"]
+radius = 5.0
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_player")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_player")

@@ -1,0 +1,8 @@
+# Godot 4 editor cache and imported assets. Never commit these: a stale .godot/
+# is the single most common reason a cloned project refuses to open.
+.godot/
+# Export output
+build/
+*.exe
+*.pck
+*.zip
