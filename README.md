@@ -1,8 +1,7 @@
 # Godot Platformer Controller
 
 A 2D platformer player controller for Godot 4: coyote time, jump buffering,
-variable jump height, double jump, air dash, wall slide and wall jump, in one
-script with every number exposed in the Inspector.
+variable jump height, double jump, air dash, wall slide and wall jump, in one script with its tuning values exposed in the Inspector.
 
 ![Running, double jumping onto a platform, dashing over a gap and wall jumping up a shaft](docs/demo.gif)
 
@@ -221,5 +220,16 @@ with interactive lessons and real projects.
 - **[Dash, Double Jump & Wall Jump](https://codingquests.io/quests/platformer-moveset?utm_source=github&utm_medium=resource&utm_campaign=godot_platformer_controller)**
   adds the double jump, the air dash with its cooldown, and the wall slide and
   wall jump. The first lesson is free.
+
+## More Free Godot Resources from CodingQuests
+
+Other free, MIT-licensed Godot 4 projects that work well next to this one:
+
+- **[Game Feel Lab](https://github.com/CodingQuests/godot-game-feel-lab)**: One sword swing split into seven layers you can switch on and off while the game runs.
+- **[Menu System](https://github.com/CodingQuests/godot-menu-system)**: Main, pause and options menus with saved settings, fade transitions and gamepad support.
+- **[State Machine](https://github.com/CodingQuests/godot-state-machine)**: A node-per-state machine, shown on a slime that idles, roams, chases, leaps, staggers and dies.
+- **[Save System](https://github.com/CodingQuests/godot-save-system)**: Save slots where picked-up items stay picked up and opened chests stay open.
+
+All twelve are listed on the [CodingQuests GitHub profile](https://github.com/CodingQuests).
 
 Made by [CodingQuests](https://codingquests.io/?utm_source=github&utm_medium=resource&utm_campaign=godot_platformer_controller).
